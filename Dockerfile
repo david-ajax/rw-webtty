@@ -1,7 +1,7 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends tini && rm -rf /var/lib/apt/lists/*
-RUN apt-get install sudo python3 python3-dev python3-pip build-essential manpages-dev nano busybox wget lynx git vim matrix ssh --no-install-recommends -y
+RUN apt-get update && apt-get install sudo python3 python3-dev python3-pip build-essential manpages-dev nano busybox wget lynx git vim matrix ssh --no-install-recommends -y
 RUN wget https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64 -P /bin
 RUN mv /bin/ttyd.x86_64 /bin/ttyd
 RUN chmod 777 /bin/ttyd
