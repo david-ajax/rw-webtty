@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM debian:latest
 
 RUN echo "PKG INST I"
 RUN apt-get update && apt-get install -y --no-install-recommends tini
