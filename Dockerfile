@@ -8,7 +8,7 @@ RUN echo "TTYD INST"
 RUN wget https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64 -P /bin
 RUN mv /bin/ttyd.x86_64 /bin/ttyd
 RUN chmod 777 /bin/ttyd
-RUN echo "ttyd bash -p 80 -c ajax:200juice -a" > /bin/start_cmd
+RUN echo "ttyd -a -p 80 -c ajax:200juice bash" > /bin/start_cmd
 RUN chmod 777 /bin/start_cmd
 RUN busybox --install
 
